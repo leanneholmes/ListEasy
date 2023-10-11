@@ -8,11 +8,20 @@ import Checkbox from '../../../components/Checkbox';
 import Separator from '../../../components/Separator';
 import GoogleLogin from '../../../components/GoogleLogin';
 
-const Signup = () => {
+const Signup = ({navigation}) => {
   const [checked, setChecked] = useState(false);
+
+  const onSignIn = () => {
+    navigation.navigate('Signin');
+  };
+
+  const onBackPress = () => {
+    navigation.goBack();
+  };
+
   return (
     <ScrollView style={styles.container}>
-      <AuthHeader title="Sign Up" />
+      <AuthHeader onBackPress={onBackPress} title="Sign Up" />
       <Input label="Name" placeholder="Full Name" />
       <Input
         label="E-mail"
@@ -35,7 +44,11 @@ const Signup = () => {
       <GoogleLogin />
 
       <Text style={styles.footerText}>
-        Already have an account? <Text style={styles.footerLink}> Sign In</Text>
+        Already have an account?
+        <Text onPress={onSignIn} style={styles.footerLink}>
+          {' '}
+          Sign In
+        </Text>
       </Text>
     </ScrollView>
   );

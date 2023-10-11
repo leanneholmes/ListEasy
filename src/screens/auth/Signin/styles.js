@@ -18,7 +18,7 @@ export const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
   button: {
-    marginTop: 30,
+    marginTop: 20,
     marginBottom: 10,
     marginLeft: 30,
     alignSelf: 'center',
