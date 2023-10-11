@@ -62,3 +62,7 @@ buck-out/
 # Ruby / CocoaPods
 /ios/Pods/
 /vendor/bundle/
+
+# Google 
+.env
+/android/app/src/main/res/values/strings.xml
