@@ -4,4 +4,7 @@ export const styles = StyleSheet.create({
   container: {
     padding: 24,
   },
+  list: {
+    marginTop: 24,
+  },
 });

@@ -2,9 +2,7 @@ import {StyleSheet} from 'react-native';
 import {colors} from '../../utils/colors.js';
 
 export const styles = StyleSheet.create({
-  mainContainer: {
-    paddingHorizontal: 24,
-  },
+  mainContainer: {},
   container: {
     flexDirection: 'row',
     alignItems: 'center',

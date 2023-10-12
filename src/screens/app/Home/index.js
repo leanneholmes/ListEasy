@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import {FlatList, View} from 'react-native';
 import {styles} from './styles';
 import {SafeAreaView} from 'react-native-safe-area-context';
@@ -9,8 +9,43 @@ import CategoryBox from '../../../components/CategoryBox';
 import ProductHomeItem from '../../../components/ProductHomeItem';
 
 const Home = () => {
+  const [selectedCategory, setSelectedCategory] = useState();
+  const [keyword, setKeyword] = useState('');
+  const [filteredProducts, setFilteredProducts] = useState(products);
+  console.log('Keyword ', keyword);
+
+  useEffect(() => {
+    if (selectedCategory && !keyword) {
+      const updatedProducts = products.filter(
+        product => product?.category === selectedCategory,
+      );
+      setFilteredProducts(updatedProducts);
+    } else if (selectedCategory && keyword) {
+      const updatedProducts = products.filter(
+        product =>
+          product?.category === selectedCategory &&
+          product?.title?.toLowerCase().includes(keyword?.toLowerCase()),
+      );
+      setFilteredProducts(updatedProducts);
+    } else if (!selectedCategory && keyword) {
+      const updatedProducts = products.filter(product =>
+        product?.title?.toLowerCase().includes(keyword?.toLowerCase()),
+      );
+      setFilteredProducts(updatedProducts);
+    } else if (!keyword && !selectedCategory) {
+      setFilteredProducts(products);
+    }
+  }, [selectedCategory, keyword]);
+
   const renderCategoryItem = ({item, index}) => {
-    return <CategoryBox title={item?.title} image={item?.image} />;
+    return (
+      <CategoryBox
+        onPress={() => setSelectedCategory(item?.id)}
+        isSelected={item?.id === selectedCategory}
+        title={item?.title}
+        image={item?.image}
+      />
+    );
   };
 
   const renderProductItem = ({item}) => {
@@ -20,7 +55,12 @@ const Home = () => {
   return (
     <SafeAreaView>
       <View style={styles.container}>
-        <Header showSearch title="Home" />
+        <Header
+          showSearch
+          onSearch={setKeyword}
+          keyword={keyword}
+          title="Home"
+        />
         <FlatList
           style={styles.list}
           horizontal
@@ -32,7 +72,7 @@ const Home = () => {
         <FlatList
           style={styles.productsList}
           numColumns={2}
-          data={products}
+          data={filteredProducts}
           renderItem={renderProductItem}
           keyExtractor={item => String(item.id)}
           ListFooterComponent={<View style={{height: 390}} />}

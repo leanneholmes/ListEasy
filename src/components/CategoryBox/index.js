@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import {Pressable, Text, View, Image} from 'react-native';
 import {styles} from './styles';
 import Input from '../Input';
+import { colors } from '../../utils/colors';
 
 const CategoryBox = ({title, image, onPress, isFirst, isSelected}) => {
   return (
