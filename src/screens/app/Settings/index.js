@@ -30,7 +30,6 @@ const Settings = ({navigation}) => {
 
   const [editing, setEditing] = useState(false);
   const [values, setValues] = useState({name: 'Leanne', email: 'myEmailhere'});
-  console.log('values :', values);
   return (
     <SafeAreaView style={{flex: 1}}>
       <View style={styles.header}>

@@ -1,45 +1,55 @@
 import React, {useState} from 'react';
-import {Linking, ScrollView, Pressable, Image, Text, View} from 'react-native';
+import {
+  Linking,
+  ScrollView,
+  Pressable,
+  Image,
+  Text,
+  View,
+  TouchableOpacity,
+} from 'react-native';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import Header from '../../../components/Header';
-import ListItem from '../../../components/ListItem';
 import Button from '../../../components/Button';
-import EditableBox from '../../../components/EditableBox';
 import {styles} from '../Settings/styles';
+import {launchImageLibrary} from 'react-native-image-picker';
 
 const CreateListing = ({navigation}) => {
-  const onItemPress = () => {
-    Linking.openURL('https://google.com');
-  };
+  const [images, setImages] = useState([]);
 
-  const onEditPress = () => {
-    setEditing(true);
-  };
+  const uploadNewImage = async () => {
+    const result = await launchImageLibrary();
 
-  const onSave = () => {
-    setEditing(false);
-  };
-
-  const onChange = (key, value) => {
-    setValues(v => ({...v, [key]: value}));
+    if (result?.assets?.length) {
+      setImages(list => [...list, ...result?.assets]);
+    }
   };
 
   const onBackPress = () => {
     navigation.goBack();
   };
 
-  const [editing, setEditing] = useState(false);
-  const [values, setValues] = useState({name: 'Leanne', email: 'myEmailhere'});
-  console.log('values :', values);
   return (
     <SafeAreaView style={{flex: 1}}>
       <View showBack={true} onBackPress={onBackPress} style={styles.header}>
         <Header showBack title="Create a new Listing" />
       </View>
       <View style={styles.container}>
-        <View style={styles.sectionHeader}>
-          <Text style={styles.sectionTitle}>Upload Photos</Text>
+        <Text style={styles.sectionTitle}>Upload Photos</Text>
+        <View style={styles.uploadContainer}>
+          <TouchableOpacity
+            style={styles.uploadContainer}
+            onPress={uploadNewImage}>
+            <View style={styles.uploadCircle}>
+              <Text style={styles.uploadPlus}>+</Text>
+            </View>
+          </TouchableOpacity>
         </View>
+        {images?.map(image => (
+          <View style={styles.imageCont} key={image?.fileName}>
+            <Image style={styles.image} source={{uri: image?.uri}} />
+          </View>
+        ))}
       </View>
     </SafeAreaView>
   );
