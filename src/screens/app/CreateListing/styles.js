@@ -4,7 +4,6 @@ import {colors} from '../../../utils/colors';
 export const styles = StyleSheet.create({
   header: {
     marginTop: 24,
-    marginLeft: 24,
   },
   container: {
     padding: 24,

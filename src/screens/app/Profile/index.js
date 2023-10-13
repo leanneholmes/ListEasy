@@ -16,6 +16,10 @@ const Profile = ({navigation}) => {
     navigation.navigate('Settings');
   };
 
+  const onNewListingPress = () => {
+    navigation.navigate('CreateListing');
+  };
+
   return (
     <SafeAreaView style={{flex: 1}}>
       <View style={styles.header}>
@@ -34,7 +38,7 @@ const Profile = ({navigation}) => {
           />
         </View>
         <View style={styles.buttonContainer}>
-          <Button title="Add New Listing" />
+          <Button onPress={onNewListingPress} title="Add New Listing" />
         </View>
       </View>
     </SafeAreaView>

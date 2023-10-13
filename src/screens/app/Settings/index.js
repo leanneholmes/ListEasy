@@ -7,7 +7,7 @@ import ListItem from '../../../components/ListItem';
 import Button from '../../../components/Button';
 import EditableBox from '../../../components/EditableBox';
 
-const Settings = () => {
+const Settings = ({navigation}) => {
   const onItemPress = () => {
     Linking.openURL('https://google.com');
   };
@@ -24,13 +24,17 @@ const Settings = () => {
     setValues(v => ({...v, [key]: value}));
   };
 
+  const onBackPress = () => {
+    navigation.goBack();
+  };
+
   const [editing, setEditing] = useState(false);
   const [values, setValues] = useState({name: 'Leanne', email: 'myEmailhere'});
   console.log('values :', values);
   return (
     <SafeAreaView style={{flex: 1}}>
       <View style={styles.header}>
-        <Header showBack title="Settings" />
+        <Header showBack onBackPress={onBackPress} title="Settings" />
       </View>
       <View style={styles.container}>
         <View style={styles.sectionHeader}>
