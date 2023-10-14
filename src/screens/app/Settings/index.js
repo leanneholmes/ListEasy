@@ -29,7 +29,10 @@ const Settings = ({navigation}) => {
   };
 
   const [editing, setEditing] = useState(false);
-  const [values, setValues] = useState({name: 'Leanne', email: 'myEmailhere'});
+  const [values, setValues] = useState({
+    name: 'Leanne Holmes',
+    email: 'sample@email.com',
+  });
   return (
     <SafeAreaView style={{flex: 1}}>
       <View style={styles.header}>

@@ -16,6 +16,7 @@ import {Image} from 'react-native';
 import ProductDetails from './src/screens/app/ProductDetails';
 import Settings from './src/screens/app/Settings';
 import CreateListing from './src/screens/app/CreateListing';
+import MyListings from './src/screens/app/MyListings';
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -36,6 +37,11 @@ const ProfileStack = () => {
       <Stack.Screen
         name="CreateListing"
         component={CreateListing}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name="MyListings"
+        component={MyListings}
         options={{headerShown: false}}
       />
     </Stack.Navigator>
@@ -62,7 +68,6 @@ const Tabs = () => (
             : require('./src/assets/tabs/bookmark.png');
         }
 
-        // You can return any component that you like here!
         return <Image style={{width: 24, height: 24}} source={icon} />;
       },
       headerShown: false,
@@ -84,7 +89,8 @@ const App = () => {
   useEffect(() => {
     GoogleSignin.configure({
       scopes: ['https://www.googleapis.com/auth/drive.readonly'], // what API you want to access on behalf of the user, default is email and profile
-      webClientId: '', // client ID of type WEB for your server (needed to verify user ID and offline access)
+      webClientId:
+        '', // client ID of type WEB for your server (needed to verify user ID and offline access)
       offlineAccess: true, // if you want to access Google API on behalf of the user FROM YOUR SERVER
     });
   }, []);
