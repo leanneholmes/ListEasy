@@ -2,6 +2,7 @@ import React from 'react';
 import {Text, Image, View, Pressable} from 'react-native';
 import {styles} from './styles';
 import Button from '../../../components/Button';
+import {UserContext} from '../../../../App';
 
 const Splash = ({navigation}) => {
   const onSignup = () => {
@@ -20,12 +21,14 @@ const Splash = ({navigation}) => {
         source={require('../../../assets/splashImage.png')}
       />
       <View style={styles.titleContainer}>
-        <Text style={styles.title}>Easily Find </Text>
-        <Text style={[styles.title, styles.innerTitle]}>All you need</Text>
-        <Text style={styles.title}> Here!</Text>
+        <Text style={styles.title}>Easily Find</Text>
+        <Text style={[styles.title, styles.innerTitle]}>Home items</Text>
+        <Text style={styles.title}>& more!</Text>
       </View>
 
-      <Button onPress={onSignin} title="Sign In" />
+      <View style={styles.buttonContainer}>
+        <Button onPress={onSignin} title="Sign In" />
+      </View>
 
       <Pressable onPress={onSignup} hitSlop={8}>
         <Text style={styles.footerText}>Sign Up</Text>

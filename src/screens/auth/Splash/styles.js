@@ -21,7 +21,6 @@ export const styles = StyleSheet.create({
   },
   innerTitle: {
     color: colors.orange,
-    textDecorationLine: 'underline',
   },
   titleContainer: {
     marginVertical: 40,
@@ -32,5 +31,10 @@ export const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: 'bold',
     marginTop: 20,
+  },
+  buttonContainer: {
+    height: 58,
+    width: '100%',
+    marginLeft: 36,
   },
 });
