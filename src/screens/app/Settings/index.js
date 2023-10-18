@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useContext, useState} from 'react';
 import {Linking, ScrollView, Pressable, Image, Text, View} from 'react-native';
 import {styles} from './styles';
 import {SafeAreaView} from 'react-native-safe-area-context';
@@ -6,6 +6,8 @@ import Header from '../../../components/Header';
 import ListItem from '../../../components/ListItem';
 import Button from '../../../components/Button';
 import EditableBox from '../../../components/EditableBox';
+import {ProfileContext} from '../../../../App';
+import {updateProfile} from '../../../utils/backendCalls';
 
 const Settings = ({navigation}) => {
   const onItemPress = () => {
@@ -16,7 +18,9 @@ const Settings = ({navigation}) => {
     setEditing(true);
   };
 
-  const onSave = () => {
+  const onSave = async () => {
+    const updatedProfile = await updateProfile(values);
+    setProfile(updatedProfile);
     setEditing(false);
   };
 
@@ -29,9 +33,11 @@ const Settings = ({navigation}) => {
   };
 
   const [editing, setEditing] = useState(false);
+  const {profile, setProfile} = useContext(ProfileContext);
   const [values, setValues] = useState({
-    name: 'Leanne Holmes',
-    email: 'sample@email.com',
+    _id: profile?._id,
+    fullName: profile?.fullName,
+    email: profile?.email,
   });
   return (
     <SafeAreaView style={{flex: 1}}>
@@ -50,16 +56,14 @@ const Settings = ({navigation}) => {
         </View>
 
         <EditableBox
-          onChangeText={v => onChange('name', v)}
-          value={values.name}
+          onChangeText={v => onChange('fullName', v)}
+          value={values.fullName}
           label="Name"
-          editable={false}
         />
         <EditableBox
           onChangeText={v => onChange('email', v)}
           value={values.email}
           label="E-mail"
-          editable={true}
           style={{marginBottom: 40}}
         />
         {editing ? (

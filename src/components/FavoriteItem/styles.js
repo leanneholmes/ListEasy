@@ -3,6 +3,7 @@ import {colors} from '../../utils/colors';
 
 export const styles = StyleSheet.create({
   container: {
+    marginHorizontal: 24,
     paddingVertical: 16,
     flexDirection: 'row',
     borderBottomWidth: 1,
@@ -17,6 +18,7 @@ export const styles = StyleSheet.create({
     height: 100,
     borderRadius: 10,
     marginRight: 20,
+    backgroundColor: colors.lightGrey,
   },
   price: {
     color: colors.black,

@@ -16,23 +16,23 @@ export const styles = StyleSheet.create({
   image: {
     width: '100%',
     height: height * 0.45,
+    backgroundColor: colors.lightGrey,
   },
   content: {
     backgroundColor: colors.white,
-    borderTopLeftRadius: 25,
-    borderTopRightRadius: 25,
-    marginTop: -19,
+    borderTopLeftRadius: 16,
+    borderTopRightRadius: 16,
+    marginTop: -40,
     paddingHorizontal: 24,
   },
   title: {
     marginTop: 40,
     fontSize: 24,
     fontWeight: '500',
-    color: colors.black,
   },
   price: {
     fontSize: 30,
-    weight: 'bold',
+    fontWeight: 'bold',
     marginVertical: 8,
   },
   description: {
@@ -41,15 +41,14 @@ export const styles = StyleSheet.create({
     marginVertical: 8,
   },
   bookmarkContainer: {
-    backgroundColor: '#F0F0F0',
-    paddingHorizontal: 18,
-    paddingVertical: 16,
+    backgroundColor: colors.lightGrey,
+    padding: 18,
     borderRadius: 8,
     marginRight: 16,
   },
   bookmarkIcon: {
-    width: 17,
-    height: 21,
+    width: 24,
+    height: 24,
   },
   backContainer: {
     backgroundColor: colors.white,

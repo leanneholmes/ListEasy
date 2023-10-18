@@ -81,7 +81,7 @@ export const getServices = async () => {
       return response?.data;
     }
   } catch (e) {
-    console.log('e services :>> ', e.response);
+    console.log('error get services: ', e.response);
   }
 };
 
@@ -128,7 +128,7 @@ export const addService = async data => {
   try {
     const formData = new FormData();
     const objKeys = Object.keys(data);
-    console.log('objKeys :>> ', objKeys);
+    console.log('objKeys: ', objKeys);
     objKeys.forEach(key => {
       formData.append(key, data[key]);
     });
@@ -146,6 +146,6 @@ export const addService = async data => {
       return services;
     }
   } catch (e) {
-    console.log('e add services :>> ', e.response);
+    console.log('error add services: ', e.response);
   }
 };

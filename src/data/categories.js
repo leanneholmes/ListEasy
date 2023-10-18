@@ -1,8 +1,7 @@
 export const categories = [
   {
     title: 'Popular',
-    image:
-      'https://static8.depositphotos.com/1338574/831/i/600/depositphotos_8318731-stock-photo-gold-star.jpg',
+    image: 'https://i.ibb.co/TvKsxvp/star.png',
   },
   {
     id: 1,
@@ -18,19 +17,19 @@ export const categories = [
   },
   {
     id: 3,
-    title: 'Armchair',
+    title: 'Sofa',
     image:
       'https://asset1.cxnmarksandspencer.com/is/image/mands/__T65_9889D_FS__EC_CHR_ELLI_0',
   },
   {
     id: 4,
-    title: 'Sofa',
+    title: 'Bed',
     image:
       'https://www.urbanconcepts.ph/wp/wp-content/uploads/2017/08/4202-1.jpg',
   },
   {
     id: 5,
-    title: 'Bed',
+    title: 'Decor',
     image:
       'https://szyszkadesign.com/wp-content/uploads/2021/12/categorybeds-1-1200x1200-1.jpg',
   },

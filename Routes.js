@@ -73,7 +73,10 @@ const Tabs = () => (
       },
       headerShown: false,
       tabBarShowLabel: false,
-      tabBarStyle: {borderTopColor: colors.lightGrey},
+      tabBarStyle: {
+        borderTopColor: colors.lightGrey,
+        backgroundColor: colors.white,
+      },
     })}>
     <Tab.Screen name="Home" component={Home} />
     <Tab.Screen name="Favorites" component={Favorites} />
