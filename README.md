@@ -55,8 +55,8 @@ The application uses a backend API which hosts all user and listing information.
 
 ### Built With
 
-* [Figma]
-* [![React][React]
+* ![Figma]
+* ![React][React]
 * [![Vue][Vue.js]][Vue-url]
 * [![Angular][Angular.io]][Angular-url]
 * [![Svelte][Svelte.dev]][Svelte-url]
