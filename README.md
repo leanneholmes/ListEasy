@@ -6,7 +6,7 @@
 <br />
 <div align="center">
   <a href="https://www.leanneholmes.ca/projects/listeasy">
-    <img src="/src/assets/splashImage.png" alt="Logo" width="100">
+    <img src="/src/assets/splashImage.png" alt="Logo" width="300" height="176">
   </a>
 
   <h3 align="center">ListEasy</h3>
@@ -49,26 +49,22 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+This was a personal project created to develop a stronger understanding of React Native. ListEasy allows users to browse or list household items for sale. 
 
-There are many great README templates available on GitHub; however, I didn't find one that really suited my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need -- I think this is it.
+Application features:
+* Authentication
+* Update user information
+* Browsing, filtering, and searching of active listings 
+* Save listings to Favorites
+* Create your own listings with image upload to server
 
-Here's why:
-* Your time should be focused on creating something amazing. A project that solves a problem and helps others
-* You shouldn't be doing the same tasks over and over like creating a README from scratch
-* You should implement DRY principles to the rest of your life :smile:
-
-Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue. Thanks to all the people have contributed to expanding this template!
-
-Use the `BLANK_README.md` to get started.
+The application uses a backend API which hosts all user and listing information. 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 
 ### Built With
-
-This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
 
 * [![Next][Next.js]][Next-url]
 * [![React][React.js]][React-url]
@@ -97,8 +93,6 @@ Project Link: [https://www.leanneholmes.ca/projects/listeasy](https://www.leanne
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
-Use this space to list resources you find helpful and would like to give credit to. I've included a few of my favorites to kick things off!
-
 * [Listicle API from Deegee Hub](https://listicle.deegeehub.com/api)
 * [Pottery Barn for Product Images](https://www.potterybarn.ca/)
 * [Community-Made Async Storage for React Native](https://github.com/react-native-async-storage/async-storage)
@@ -121,8 +115,7 @@ Use this space to list resources you find helpful and would like to give credit 
 [license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
 [license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/othneildrew
-[product-screenshot]: images/screenshot.png
+[linkedin-url]: https://linkedin.com/in/leanne-holmes
 [Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
 [Next-url]: https://nextjs.org/
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
