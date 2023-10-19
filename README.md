@@ -55,7 +55,7 @@ The application uses a backend API which hosts all user and listing information.
 
 ### Built With
 
-* [![Figma][Figma]]
+* [Figma]
 * [![React][React]
 * [![Vue][Vue.js]][Vue-url]
 * [![Angular][Angular.io]][Angular-url]
@@ -106,7 +106,7 @@ Project Link: [https://www.leanneholmes.ca/projects/listeasy](https://www.leanne
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/leanne-holmes
 [Figma]: https://img.shields.io/badge/Figma-000000?style=for-the-badge&logo=figma&logoColor=23F24E1E
-[React]: https://img.shields.io/badge/React_Native-React-20232A?style=for-the-badge&logo=React&logoColor=61DAFB
+[React]: https://img.shields.io/badge/React_Native-20232A?style=for-the-badge&logo=React&logoColor=61DAFB
 [React.js]: https://img.shields.io/badge/React_Native-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
 [React-url]: https://reactjs.org/
 [Vue.js]: https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D
