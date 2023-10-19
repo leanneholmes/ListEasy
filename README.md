@@ -66,7 +66,7 @@ The application uses a backend API which hosts all user and listing information.
 
 ### Built With
 
-* [![Next][Next.js]][Next-url]
+* [![Figma][Figma]][Next-url]
 * [![React][React.js]][React-url]
 * [![Vue][Vue.js]][Vue-url]
 * [![Angular][Angular.io]][Angular-url]
@@ -116,7 +116,8 @@ Project Link: [https://www.leanneholmes.ca/projects/listeasy](https://www.leanne
 [license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/leanne-holmes
-[Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
+[Figma]: https://img.shields.io/badge/Figma-000000?style=for-the-badge&logo=figma&logoColor=23F24E1E
+[Next.js]: https://img.shields.io/badge/Figma-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
 [Next-url]: https://nextjs.org/
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
 [React-url]: https://reactjs.org/
